@@ -1,0 +1,259 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Container for page content */
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #0779e4 3px solid;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.navigation {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation li {
+  display: inline;
+  margin-right: 10px;
+}
+
+article {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+}
+
+h1, h3 {
+  color: #333;
+}
+
+/* Link styles */
+a {
+  color: #0779e4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Form styling */
+form {
+  width: 100%;
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* General button styling */
+button {
+  display: block;
+  /* width: 100%; */
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #333; /* Dark background for primary actions */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #555; /* Slightly lighter on hover */
+}
+
+/* Secondary button - less emphasis for actions like sign up/login toggle */
+.secondary-button {
+  background-color: #f4f4f4; /* Lighter background for secondary actions */
+  color: #333;
+  border: 2px solid #333; /* Solid border to distinguish from primary button */
+}
+
+.secondary-button:hover {
+  background-color: #e1e1e1; /* Lighter grey on hover */
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 0;
+  }
+
+  header h1, header nav {
+    text-align: center;
+  }
+
+  .navigation li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+nav h1 {
+  color: #fff;
+}
+
+nav input[type="text"] {
+  flex-grow: 2;
+  margin: 0 20px;
+  padding: 5px;
+}
+
+nav a, nav button {
+  color: #fff;
+  margin-right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Card styling for posts */
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color: #333;
+  font-size: 24px;
+}
+
+.card p {
+  color: #666;
+  font-size: 16px;
+}
+
+.card a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.sorts {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  margin-left: 3px;
+}
+
+.sorts button {
+  margin-right: 10px;
+}
+
+.post-details-buttons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.post-details-buttons button {
+  margin-right: 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  border: 2px solid #333;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Fixed position */
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5); /* Optional: white background with transparency */
+  z-index: 1000; /* Ensures it's above other content */
+}
+
+/* Style for the actual loading animation */
+.loader > div {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
